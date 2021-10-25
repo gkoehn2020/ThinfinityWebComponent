@@ -43,9 +43,9 @@ end;
 
 procedure TWebComponentProgressIndicator.CreateWebComponent(aControl: TWinControl);
 begin
-  VirtualUI.HTMLDoc.CreateSessionURL('webAssets',FXtagDir);
-  VirtualUI.HTMLDoc.LoadScript('/webAssets/js/x-tag-core.min.js','');
-  VirtualUI.HTMLDoc.ImportHTML('/webAssets/componentOne/componentone.html','');
+  VirtualUI.HTMLDoc.CreateSessionURL('webAssetsAlias',FXtagDir);
+  VirtualUI.HTMLDoc.LoadScript('/webAssetsAlias/js/x-tag-core.min.js','');
+  VirtualUI.HTMLDoc.ImportHTML('/webAssetsAlias/progressIndicator/progressIndicator.html','');
 
   FRemoteObj := TJSObject.Create(AControl.Name);
   FRemoteObj.Events.Add('start');
